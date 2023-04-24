@@ -11,3 +11,6 @@ A portifolio page I made for Mary Linh - an amazing architect.
 ## To deploy the app after making changes
 
 1. `npm run build`
+2. `git add .`
+3. `git commit -m "commit message"`
+4. `git subtree push --prefix dist origin gh-pages`
