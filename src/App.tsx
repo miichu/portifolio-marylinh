@@ -1,8 +1,10 @@
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
+import Biography from "./pages/biography/Biography";
+import Home from "./pages/home/Home";
 
-function App() {
+const App = () => {
   return (
     <>
       <div>
@@ -20,8 +22,10 @@ function App() {
           deny and ever be meanies to my precious cousin ever again{" "}
         </p>
       </div>
+      <Home />
+      <Biography />
     </>
   );
-}
+};
 
 export default App;
