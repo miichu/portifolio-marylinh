@@ -1,6 +1,6 @@
 # 👩🏻 portifolio-marylinh
 
-A portifolio page I made for Mary Linh - an amazing architect.
+A portifolio page I made for Mary Linh - an amazing architect. Check it out live on https://miichu.github.io/portifolio-marylinh/
 
 ## 👩🏻‍💻 To do list
 
