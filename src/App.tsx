@@ -1,31 +1,50 @@
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
-import Biography from "./pages/biography/Biography";
-import Home from "./pages/home/Home";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./app.css";
+import { ErrorBoundary } from "react-error-boundary";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Page from "./pages/Page.tsx";
+import ErrorPage from "./components/error/errorPage.tsx";
+import AboutMe from "./pages/aboutme/AboutMe.tsx";
+import Home from "./pages/home/Home.tsx";
+import Projects from "./pages/projects/Projects.tsx";
 
-const App = () => {
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Mary Linh sin portifolio</h1>
-      <div className="card">
-        <p>
-          This gonna be the best portifolio that no mofo senior architects and
-          deny and ever be meanies to my precious cousin ever again{" "}
-        </p>
-      </div>
-      <Home />
-      <Biography />
-    </>
-  );
-};
+const router = createBrowserRouter([
+  {
+    path: "/portifolio-marylinh/",
+    element: <Page />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "/portifolio-marylinh/",
+        element: <Home />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "/portifolio-marylinh/about-me",
+        element: <AboutMe />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "/portifolio-marylinh/projects",
+        element: <Projects />,
+        errorElement: <ErrorPage />,
+        children: [
+          {
+            path: "/portifolio-marylinh/projects/:projectId",
+            element: <Projects />,
+            errorElement: <ErrorPage />,
+          },
+        ],
+      },
+    ],
+  },
+]);
 
-export default App;
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+  <React.StrictMode>
+    <ErrorBoundary fallback={<div>Something went wrong!</div>}>
+      <RouterProvider router={router} />
+    </ErrorBoundary>
+  </React.StrictMode>
+);

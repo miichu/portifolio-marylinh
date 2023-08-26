@@ -25,6 +25,7 @@ A portifolio page I made for Mary Linh - an amazing architect. Check it out live
 1. `npm run build`
 2. `git add .`
 3. `git commit -m "commit message"`
+4. `git push` etc...
 
 ## Design and implementation notes
 
