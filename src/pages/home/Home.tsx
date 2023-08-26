@@ -1,13 +1,21 @@
 import styled from "styled-components";
+import HomeImage from "./../../assets/TB-FasadeVest.png";
 
 const Container = styled.div`
-  height: 400px;
-  background-color: var(--main-beige-color);
+  width: 100%;
+`;
+
+const Image = styled.img`
+  height: 100%;
   width: 100%;
 `;
 
 const Home = () => {
-  return <Container>home</Container>;
+  return (
+    <Container>
+      <Image src={HomeImage} />
+    </Container>
+  );
 };
 
 export default Home;
