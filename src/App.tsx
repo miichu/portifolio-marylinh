@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./app.css";
+import "./index.css";
 import { ErrorBoundary } from "react-error-boundary";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Page from "./pages/Page.tsx";
