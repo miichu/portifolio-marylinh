@@ -12,9 +12,9 @@
 }
 
 body {
-  margin: 0;
-  min-width: 320px;
+  margin: 0 auto;
   min-height: 100vh;
+  max-width: 1284px;
 }
 
 h1 {

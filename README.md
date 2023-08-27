@@ -7,12 +7,16 @@ A portifolio page I made for Mary Linh - an amazing architect. Check it out live
 ### ❗ Must haves
 
 - [x] Set up page on github pages and add styled components
-- [] Add navigation menu
-- []
+- [x] Add navigation menu
+- [x] Add content in About Me page.
+- [] Make sure page, content and menu is responsive
 
 ### ✨ Nice to have
 
-- [x] Set
+- [x] Page active? Underline in the menu
+- [] SPA when clicking nav points it will scroll down instead with a sticky menu
+- [] Use Sanity for content management
+- []
 
 ## 🏃🏻 How to run
 
