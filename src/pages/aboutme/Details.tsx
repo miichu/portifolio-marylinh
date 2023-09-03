@@ -1,14 +1,6 @@
 import styled from "styled-components";
-import { IPerson } from "./AboutMe";
-
-const Heading2 = styled.h2`
-  letter-spacing: 2.5px;
-  font-weight: 250;
-  font-size: 2em;
-  line-height: 1.1;
-  color: darkred;
-  margin-top: 0;
-`;
+import { Heading2 } from "../styledComponents";
+import { IPerson } from "../../types/person";
 
 const HeadingAndTextWrapper = styled.div`
   display: flex;

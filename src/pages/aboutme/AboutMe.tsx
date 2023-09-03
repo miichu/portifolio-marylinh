@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import MLN_portrait from "./../../assets/MLN_portrett.png";
 import Details from "./Details";
+import { Heading1 } from "../styledComponents";
+import { IPerson } from "../../types/person";
 
 const Container = styled.div`
   height: 400px;
@@ -35,15 +37,6 @@ const Container = styled.div`
   }
 `;
 
-const Heading1 = styled.h1`
-  letter-spacing: 2.5px;
-  font-weight: 250;
-  font-size: 2.5em;
-  line-height: 1.1;
-  color: darkred;
-  grid-area: heading;
-`;
-
 const Portrait = styled.img`
   max-height: 500px;
   grid-area: img;
@@ -55,15 +48,6 @@ const Portrait = styled.img`
     max-height: 300px;
   }
 `;
-
-export interface IPerson {
-  name: string;
-  email: string;
-  telephone: string;
-  previousWork: string[];
-  education: string[];
-  description: string;
-}
 
 const person: IPerson = {
   name: "Mary Linh Nguyen",
