@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Heading2 } from "../styledComponents";
-import { IPerson } from "../../types/person";
+import { IUser } from "../../types/user";
 
 const HeadingAndTextWrapper = styled.div`
   display: flex;
@@ -17,7 +17,7 @@ const Details = ({
   education,
   email,
   telephone,
-}: Partial<IPerson>) => {
+}: Partial<IUser>) => {
   return (
     <>
       <HeadingAndTextWrapper style={{ gridArea: "education" }}>

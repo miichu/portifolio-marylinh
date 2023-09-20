@@ -1,12 +1,16 @@
 export interface IProject {
   name: string;
   id: string;
+  typology: string;
   location?: string;
-  type?: string;
-  phase?: string;
+  type: {
+    label: "course" | "phase";
+    value: string;
+  };
   stakeholders?: string[];
-  course?: string;
   partners?: string[];
-  mentor?: string;
-  photo: string;
+  mentor?: string[];
+  illustrator?: string[];
+  photo?: string;
+  description?: string;
 }

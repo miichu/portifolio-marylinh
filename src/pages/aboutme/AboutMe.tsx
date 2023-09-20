@@ -2,7 +2,7 @@ import styled from "styled-components";
 import MLN_portrait from "./../../assets/MLN_portrett.png";
 import Details from "./Details";
 import { Heading1 } from "../styledComponents";
-import { IPerson } from "../../types/person";
+import { IUser } from "../../types/user";
 
 const Container = styled.div`
   height: 400px;
@@ -49,7 +49,7 @@ const Portrait = styled.img`
   }
 `;
 
-const person: IPerson = {
+const person: IUser = {
   name: "Mary Linh Nguyen",
   email: "marylinh.nguyen93@gmail.com",
   telephone: "+47 47 36 56 04",
