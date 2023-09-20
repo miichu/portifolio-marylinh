@@ -24,7 +24,8 @@ A portifolio page I made for Mary Linh - an amazing architect. Check it out live
 
 1. clone this project
 2. install the app with `yarn`
-3. To run the app locally, run `yarn dev`
+3. To run the app locally, run `yarn dev` in root
+4. To run Sanity Studio locally, `cd` into `sanity-project` folder. Then run `yarn dev`.
 
 ## 🚀 To deploy the app after making changes
 
