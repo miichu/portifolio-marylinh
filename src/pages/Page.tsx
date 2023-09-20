@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { BASE_URL } from "../utils/constants";
 import { Link, Outlet } from "react-router-dom";
 import logo from "./../assets/MLN_logo.png";
-
 const PageContainer = styled.div`
   padding: 0 2em;
 `;
@@ -48,7 +47,7 @@ const StyledLink = styled(Link)`
   }
 `;
 
-export default function Root() {
+const Page = () => {
   return (
     <PageContainer>
       <Menu>
@@ -69,4 +68,5 @@ export default function Root() {
       </OutletContainer>
     </PageContainer>
   );
-}
+};
+export default Page;

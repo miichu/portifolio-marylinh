@@ -26,7 +26,7 @@ const Projects = () => {
       <Heading1>Projects</Heading1>
       <ProjectsContainer>
         {projects.map((project) => (
-          <ProjectWrapper>
+          <ProjectWrapper key={project.id}>
             <Image src={project.photo} />
             <Heading2 style={{ fontSize: "1.5em" }}>
               {project.name.toUpperCase()}
