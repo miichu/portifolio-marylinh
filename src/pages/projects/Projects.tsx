@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Heading1, Heading2 } from "../styledComponents";
-import { projects } from "./projectsData";
+import { useContext } from "react";
+import { ProjectContext } from "../../context/ProjectContext";
 
 const ProjectsContainer = styled.div`
   display: grid;
@@ -21,18 +22,23 @@ const Image = styled.img`
 `;
 
 const Projects = () => {
+  const projects = useContext(ProjectContext);
   return (
     <>
       <Heading1>Projects</Heading1>
       <ProjectsContainer>
-        {projects.map((project) => (
-          <ProjectWrapper key={project.id}>
-            <Image src={project.photo} />
-            <Heading2 style={{ fontSize: "1.5em" }}>
-              {project.name.toUpperCase()}
-            </Heading2>
-          </ProjectWrapper>
-        ))}
+        {projects.length !== 0 ? (
+          projects.map((project) => (
+            <ProjectWrapper key={project.id}>
+              <Image src={project.photo} />
+              <Heading2 style={{ fontSize: "1.5em" }}>
+                {project.name.toUpperCase()}
+              </Heading2>
+            </ProjectWrapper>
+          ))
+        ) : (
+          <p>prosjekter å vise</p>
+        )}
       </ProjectsContainer>
     </>
   );

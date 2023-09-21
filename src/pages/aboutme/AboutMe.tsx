@@ -2,6 +2,8 @@ import styled from "styled-components";
 import MLN_portrait from "./../../assets/MLN_portrett.png";
 import Details from "./Details";
 import { Heading1 } from "../styledComponents";
+import { useContext } from "react";
+import { UserContext } from "../../context/UserContext";
 import { IUser } from "../../types/user";
 
 const Container = styled.div`
@@ -49,20 +51,8 @@ const Portrait = styled.img`
   }
 `;
 
-const person: IUser = {
-  name: "Mary Linh Nguyen",
-  email: "marylinh.nguyen93@gmail.com",
-  telephone: "+47 47 36 56 04",
-  previousWork: ["PI Arkitekter", "Rambøll / Henning Larsen"],
-  education: [
-    "Master i arkitektur - NTNU",
-    "Studiespeisalisering med formgivingsfag - Elvebakken videregående skole",
-  ],
-  description:
-    "Denne portfolioen er en samling av utvalgte arbeider fra min tid somarkitektstudent ved NTNU i Trondheim, og som arkitekt hos Rambøll / Henning Larsen. Prosjektene varierer fra boligprosjektering i liten skala til byplanlegging i stor skala, og er presentert i omvendt kronologisk rekkefølge. \n \n I arbeidslivet har jeg fått muligheten til å jobbe med mange prosjekter i tidlig fase. Jeg trives godt i arbeid med visualiseringer og fremstilling av prosjekter. \nI løpet av studietiden ble jeg kjent med ulike teknikker, redskaper og dataprogrammer, og det har vært spennende å eksperimentere med disse for å oppnå variasjon. Visualiseringene varierer fra å være fotorealistiske til mer abstrakte og konseptuelle avhengig av prosjekt, tidsramme og hvilken stemning jeg ønsket å formidle.",
-};
-
 const AboutMe = () => {
+  const person: IUser = useContext(UserContext);
   const { email, telephone, previousWork, education, description } = person;
   return (
     <Container>
