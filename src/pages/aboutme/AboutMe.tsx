@@ -3,7 +3,7 @@ import MLN_portrait from "./../../assets/MLN_portrett.png";
 import Details from "./Details";
 import { Heading1 } from "../styledComponents";
 import { useContext } from "react";
-import { UserContext } from "../../context/UserContext";
+import { UserContext } from "../../context/UserProvider";
 import { IUser } from "../../types/user";
 
 const Container = styled.div`
