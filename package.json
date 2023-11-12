@@ -9,11 +9,6 @@
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
-  "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": [
-      "npm run lint"
-    ]
-  },
   "dependencies": {
     "@navikt/ds-react": "^5.5.0",
     "@sanity/client": "^6.4.12",
