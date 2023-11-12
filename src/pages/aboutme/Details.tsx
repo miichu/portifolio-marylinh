@@ -24,7 +24,7 @@ const Details = ({
         <Heading2>UTDANNING</Heading2>
         <List>
           {education?.map((school) => (
-            <li>{`${school.title} -  ${school.description}`}</li>
+            <li key={school.title}>{`${school.place} -  ${school.title}`}</li>
           ))}
         </List>
       </HeadingAndTextWrapper>
@@ -32,7 +32,7 @@ const Details = ({
         <Heading2>KARRIERE</Heading2>
         <List>
           {previousWork?.map((work) => (
-            <li>{`${work.title} -  ${work.description}`}</li>
+            <li key={work.place}>{`${work.place} - ${work.title}`}</li>
           ))}
         </List>
       </HeadingAndTextWrapper>

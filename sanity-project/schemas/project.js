@@ -1,3 +1,4 @@
+import photo from './photo'
 // schemas/project.js
 export default {
   name: 'project',
@@ -21,6 +22,12 @@ export default {
       name: 'location',
       type: 'string',
       title: 'Sted',
+    },
+    {
+      name: 'frontpagePhoto',
+      type: 'photo',
+      title: 'Forsidebilde',
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'type',
@@ -58,8 +65,7 @@ export default {
           name: 'stakeholder',
           fields: [
             {type: 'string', name: 'name', title: 'Navn *', validation: (Rule) => Rule.required()},
-            {type: 'string', name: 'email', title: 'Epostadresse'},
-            {type: 'string', name: 'telephone', title: 'Tlfnr'},
+
             {type: 'string', name: 'description', title: 'Beskrivelse/kommentar'},
           ],
         },
@@ -75,8 +81,7 @@ export default {
           name: 'partner',
           fields: [
             {type: 'string', name: 'name', title: 'Navn *', validation: (Rule) => Rule.required()},
-            {type: 'string', name: 'email', title: 'Epostadresse'},
-            {type: 'string', name: 'telephone', title: 'Tlfnr'},
+
             {type: 'string', name: 'description', title: 'Beskrivelse/kommentar'},
           ],
         },
@@ -92,8 +97,7 @@ export default {
           name: 'mentor',
           fields: [
             {type: 'string', name: 'name', title: 'Navn *', validation: (Rule) => Rule.required()},
-            {type: 'string', name: 'email', title: 'Epostadresse'},
-            {type: 'string', name: 'telephone', title: 'Tlfnr'},
+
             {type: 'string', name: 'description', title: 'Beskrivelse/kommentar'},
           ],
         },
@@ -109,8 +113,7 @@ export default {
           name: 'illustrator',
           fields: [
             {type: 'string', name: 'name', title: 'Navn *', validation: (Rule) => Rule.required()},
-            {type: 'string', name: 'email', title: 'Epostadresse'},
-            {type: 'string', name: 'telephone', title: 'Tlfnr'},
+
             {type: 'string', name: 'description', title: 'Beskrivelse/kommentar'},
           ],
         },
@@ -121,6 +124,15 @@ export default {
       name: 'description',
       type: 'array',
       of: [{type: 'block'}],
+    },
+
+    // Photos
+
+    {
+      name: 'photos',
+      type: 'array',
+      title: 'Bilder',
+      of: [{type: 'photo'}],
     },
   ],
 }

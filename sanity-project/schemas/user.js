@@ -33,12 +33,24 @@ export default {
           fields: [
             {
               type: 'string',
-              name: 'title',
-              title: 'Arbeidstittel *',
+              name: 'place',
+              title: 'Arbeidssted *',
               validation: (Rule) => Rule.required(),
+            },
+            {
+              type: 'string',
+              name: 'title',
+              title: 'Arbeidstittel/stilling ',
+              // validation: (Rule) => Rule.required(),
             },
             {type: 'string', name: 'description', title: 'Beskrivelse/kommentar'},
           ],
+          preview: {
+            select: {
+              title: 'place',
+              subtitle: 'title',
+            },
+          },
         },
       ],
     },
@@ -53,13 +65,26 @@ export default {
           fields: [
             {
               type: 'string',
-              name: 'education',
-              title: 'Utdanning',
+              name: 'place',
+              title: 'Skole / institutt *',
               validation: (Rule) => Rule.required(),
             },
+            {
+              type: 'string',
+              name: 'title',
+              title: 'Studielinje/tittel/grad *',
+              validation: (Rule) => Rule.required(),
+            },
+            {type: 'string', name: 'description', title: 'Beskrivelse/kommentar'},
           ],
         },
       ],
+      preview: {
+        select: {
+          title: 'place',
+          subtitle: 'title',
+        },
+      },
     },
     {
       title: 'Om meg',
