@@ -1,5 +1,4 @@
 import sanityClient from "../client";
-import { IUser } from "../types/user";
 
 export const fetchUser = async () => {
   try {
