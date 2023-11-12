@@ -2,9 +2,7 @@ import styled from "styled-components";
 import MLN_portrait from "./../../assets/MLN_portrett.png";
 import Details from "./Details";
 import { Heading1 } from "../styledComponents";
-import { useContext } from "react";
-import { UserContext } from "../../context/UserProvider";
-import { IUser } from "../../types/user";
+import { useUserContext } from "../../context-providers/UserContextProvider";
 
 const Container = styled.div`
   height: 400px;
@@ -52,8 +50,8 @@ const Portrait = styled.img`
 `;
 
 const AboutMe = () => {
-  const person: IUser = useContext(UserContext);
-  const { email, telephone, previousWork, education, description } = person;
+  const { user } = useUserContext();
+  const { email, telephone, previousWork, education, description } = user;
   return (
     <Container>
       <Heading1>OM MEG </Heading1>

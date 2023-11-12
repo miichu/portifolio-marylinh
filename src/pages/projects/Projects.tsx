@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import { Heading1, Heading2 } from "../styledComponents";
-import { useContext } from "react";
-import { ProjectContext } from "../../context/ProjectContext";
+import { useProjectContext } from "../../context-providers/ProjectContextProvider";
+import { IProject } from "../../types/project";
+
+import { urlFor } from "../../utils/sanityUtils";
 
 const ProjectsContainer = styled.div`
   display: grid;
@@ -22,15 +24,23 @@ const Image = styled.img`
 `;
 
 const Projects = () => {
-  const projects = useContext(ProjectContext);
+  const { projects } = useProjectContext();
+
   return (
     <>
       <Heading1>Projects</Heading1>
       <ProjectsContainer>
         {projects.length !== 0 ? (
-          projects.map((project) => (
+          projects.map((project: IProject) => (
             <ProjectWrapper key={project.id}>
-              <Image src={project.photo} />
+              {project?.photos !== undefined &&
+                project?.photos?.map((photo) => (
+                  <Image
+                    key={photo.id}
+                    src={urlFor(photo.image).width(400).height(300).url()}
+                  />
+                ))}
+
               <Heading2 style={{ fontSize: "1.5em" }}>
                 {project.name.toUpperCase()}
               </Heading2>
