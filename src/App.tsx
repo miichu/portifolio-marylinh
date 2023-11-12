@@ -7,9 +7,9 @@ import { useProjectContext } from "./context-providers/ProjectContextProvider";
 import { useUserContext } from "./context-providers/UserContextProvider";
 import { useQueries } from "react-query";
 import { fetchProjects } from "./queries/fetchProjects";
-import { fetchUser } from "./queries/fetchUser";
 import { mapResponseToUser } from "./queries/mapUser";
 import { mapResponseToProjects } from "./queries/mapProjects";
+import { fetchUser } from "./queries/fetchUser";
 
 function App() {
   const { projects, setProjects } = useProjectContext();
